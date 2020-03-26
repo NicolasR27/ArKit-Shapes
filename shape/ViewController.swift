@@ -21,6 +21,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.scene = scene
         
         createShapes()
+        addLights()
     }
     
     func createShapes(){
@@ -43,6 +44,26 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let sphereNode = SCNNode(geometry: sphere)
         sphereNode.position = SCNVector3Make(0.5,0,-0.8)
         sceneView.scene.rootNode.addChildNode(sphereNode)
+    }
+    
+    func addLights(){
+        let directional = SCNLight()
+        directional.type = .directional
+        let directionalNode = SCNNode()
+        directionalNode.light = directional
+        directionalNode.eulerAngles.x = -.pi/4
+        sceneView.scene.rootNode.addChildNode(directionalNode)
+        
+        let ambient = SCNLight()
+        ambient.type = .ambient
+        let ambientLightNode = SCNNode()
+        let color = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        ambient.color = color
+        sceneView.scene.rootNode.addChildNode(ambientLightNode)
+        
+        
+        
+        
     }
     
     
