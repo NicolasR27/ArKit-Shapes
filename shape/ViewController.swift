@@ -61,11 +61,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         ambient.color = color
         sceneView.scene.rootNode.addChildNode(ambientLightNode)
         
-        
-        
-        
-    }
-    
+      }
     
     
     override func viewWillAppear(_ animated: Bool) {
