@@ -1,10 +1,4 @@
-//
-//  AppDelegate.swift
-//  shape
-//
-//  Created by Nicolas Rios on 3/25/20.
-//  Copyright © 2020 Nicolas Rios. All rights reserved.
-//
+
 
 import UIKit
 
