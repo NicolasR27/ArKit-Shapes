@@ -18,7 +18,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         addLights()
     }
     
-    func createShapes(){
+    func createShapes() {
         
         let pyramid = SCNPyramid(width: 0.2, height: 0.2, length: 0.2)
        pyramid.firstMaterial?.diffuse.contents = UIColor.green
@@ -40,7 +40,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.scene.rootNode.addChildNode(sphereNode)
     }
     
-    func addLights(){
+    func addLights() {
         let directional = SCNLight()
         directional.type = .directional
         let directionalNode = SCNNode()
